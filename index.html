@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Соня Перова | Portfolio</title>
+    <title>Main Page</title>
+    <link rel="icon" type="image/png" href="images/favicon.svg">
     <meta
       name="description"
       content="Minimalist editorial portfolio website for Соня Перова."
@@ -22,19 +23,122 @@
   </head>
   <body data-lang="eng" data-page="home">
     <header class="site-header">
+
+      <!-- НИЖНИЙ СЛОЙ: SONYA + LANGUAGES -->
       <nav class="nav container" aria-label="Primary navigation">
-        <a href="index.html" class="brand nav-item active" data-i18n="brand">SONIA PEROVA</a>
+
+        <a href="index.html"
+          class="brand nav-item active"
+          data-i18n="brand">
+          SONYA PEROVA
+        </a>
+
+        <!-- DESKTOP NAVIGATION -->
         <div class="nav-links">
-          <a href="work.html" class="nav-item" data-section="work" data-i18n="navWork">WORK</a>
-          <a href="showreel.html" class="nav-item" data-section="showreel" data-i18n="navShowreel">SHOWREEL</a>
-          <a href="index.html#contact" class="nav-item" data-section="contact" data-i18n="navContact">CONTACT</a>
+
+          <a href="work.html"
+            class="nav-item"
+            data-section="work"
+            data-i18n="navWork">
+            Work
+          </a>
+
+          <a href="showreel.html"
+            class="nav-item"
+            data-section="showreel"
+            data-i18n="navShowreel">
+            Showreel
+          </a>
+
+          <a href="contact.html"
+            class="nav-item"
+            data-section="contact"
+            data-i18n="navContact">
+            Contact
+          </a>
+
         </div>
+
         <div class="lang-switcher" aria-label="Language switcher">
-          <a href="#" class="nav-item lang-btn active" data-lang="eng" aria-current="true">ENG</a>
-          <a href="#" class="nav-item lang-btn" data-lang="ru" aria-current="false">RU</a>
+
+          <a href="#"
+            class="nav-item lang-btn active"
+            data-lang="eng"
+            aria-current="true">
+            ENG
+          </a>
+
+          <span class="lang-slash">/</span>
+
+          <a href="#"
+            class="nav-item lang-btn"
+            data-lang="ru"
+            aria-current="false">
+            RU
+          </a>
+
         </div>
-      </nav>
-    </header>
+
+            </nav>
+
+      </header>
+
+
+      <!-- ВЕРХНИЙ СЛОЙ: ТОЛЬКО BURGER / CROSS -->
+      <div class="burger-layer container">
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+
+      <!-- MOBILE MENU — NORMAL -->
+      <!-- MOBILE MENU -->
+<div class="mobile-menu">
+
+  <div class="mobile-menu-links">
+
+      <a
+        href="index.html"
+        class="active"
+        data-i18n="menuHome"
+      >
+        Home
+      </a>
+
+      <a
+        href="work.html"
+        data-i18n="navWork"
+      >
+        Work
+      </a>
+
+      <a
+        href="showreel.html"
+        data-i18n="navShowreel"
+      >
+        Showreel
+      </a>
+
+      <a
+        href="contact.html"
+        data-i18n="navContact"
+      >
+        Contact
+      </a>
+
+    </div>
+
+  </div>
+
 
       <div class="page-wrapper">
 
@@ -47,93 +151,93 @@
         <img
             class="hero-photo"
             src="images/Rectangle 408.png"
-            alt="Portrait of Sonia Perova"
+            alt="Portrait of Sonya Perova"
         >
 
         <div class="hero-copy">
-            <p data-i18n="heroText">
-                Hi! My name is Sonya Perova. I'm a
-                <span>graphic & motion designer</span>
-                with background in
-                <span>illustration</span>.
-                Currently based in Moscow.
-            </p>
-        </div>
+         <p data-i18n="heroText">
+            Hi! My name is Sonya Perova. I'm a
+            <span class="accent">graphic & motion designer</span>
+            with background in
+            <span class="accent">illustration</span>.
+            Currently based in Moscow.
+        </p>
+      </div>
 
     </div>
 </section>
 
 <div class="container projects-container">
 
-    <div class="calendar-project">
+    <a href="project-calendar.html" class="calendar-project">
         <img src="images/kalendar2.gif" alt="Календарь по номерам">
 
         <p class="project-title" data-i18n="calendarTitle">
             Календарь по номерам
         </p>
-    </div>
+    </a>
 
-    <div class="project project-potanin-small">
+    <a href="project-potanin.html" class="project project-potanin-small reveal">
         <img src="images/potanin2.png" alt="Брендинг фонда Потанина">
-    </div>
+    </a>
 
-    <div class="project-potanin-large">
+    <a href="project-potanin.html" class="project-potanin-large reveal">
         <img src="images/potanin1.png" alt="Брендинг фонда Потанина">
         <p class="project-title" data-i18n="potaninTitle">
             Брендинг фонда Потанина
         </p>
-    </div>
+    </a>
 
-    <div class="project-passengers">
+    <div class="project-passengers reveal">
         <img src="images/2193.jpg" alt="Внимание, пассажиры">
         <p class="project-title" data-i18n="passengersTitle">
             Внимание, пассажиры
         </p>
     </div>
 
-    <div class="project-sculpture">
+    <div class="project-sculpture reveal">
         <img src="images/sculpture1.jpg" alt="Если потерялся, оставайся здесь">
         <p class="project-title" data-i18n="sculptureTitle">
             Если потерялся, оставайся здесь
         </p>
     </div>
 
-    <div class="project-book">
+    <a href="project-bodycoordinate.html" class="project-book reveal">
         <img src="images/kniga3.png" alt="">
         <p class="project-title" data-i18n="bodyTitle">
             BO.ODY, CO.ORDINATE
         </p>
-    </div>
+    </a>
 
-    <div class="project-calendar-page">
+    <a href="project-calendar.html" class="project-calendar-page reveal">
         <img src="images/kalendar.jpg" alt="">
         <p class="project-title" data-i18n="calendarTitle">
             Календарь по номерам
         </p>
-    </div>
+    </a>
 
-    <div class="project-book-full">
+    <a href="project-bodycoordinate.html" class="project-book-full reveal">
         <img src="images/kniga2.png" alt="BO.ODY, CO.ORDINATE">
 
         <p class="project-title" data-i18n="bodyTitle">
             BO.ODY, CO.ORDINATE
         </p>
-    </div>
+    </a>
 
-        <div class="project-portraits-left">
+   <a href="project-portraits.html" class="project-portraits-left reveal">
         <img src="images/portrait1.png" alt="Серия портретов">
-    </div>
+    </a>
 
-    <div class="project-portraits-right">
+    <a href="project-portraits.html" class="project-portraits-right reveal">
         <img src="images/portrait2.png" alt="Серия портретов">
-    </div>
+    </a>
 
-    <p class="project-portraits-caption" data-i18n="portraitsTitle">
+    <a href="project-portraits.html" class="project-portraits-caption" data-i18n="portraitsTitle">
         Серия портретов
-    </p>
+    </a>
 
 
-    <div class="project-yakut">
+    <div class="project-yakut reveal">
         <img src="images/coverr.png" alt="Феномен якутского кино">
     </div>
 
@@ -142,13 +246,13 @@
     </p>
 
 
-    <div class="project-podvorie">
+    <a href="project-podvorie.html" class="project-podvorie reveal">
         <img src="images/podvorie2.png" alt="Подворье">
-    </div>
+    </a>
 
-    <p class="project-podvorie-caption" data-i18n="podvorieTitle">
+    <a href="project-podvorie.html" class="project-podvorie-caption" data-i18n="podvorieTitle">
         Брендинг арт-пространства Подворье
-    </p>
+    </a>
 
 </div>
 
@@ -251,8 +355,12 @@
         <div class="footer-block">
             <h3 data-i18n="footerContacts">Contacts</h3>
             <div class="footer-entry">
-              <p>sofiaperovalala@gmail.com</p>
-              <p>+7 926 925 01 08</p>
+              <a href="mailto:sofiaperovalala@gmail.com">
+                sofiaperovalala@gmail.com
+              </a>
+              <a href="tel:+79269250108">
+                +7 926 925 01 08
+              </a>
             </div>
           </div>
         </div>

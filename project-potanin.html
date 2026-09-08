@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Non-place — Sonia Perova</title>
+    <title>Potanin — case study</title>
+    <link rel="icon" type="image/png" href="images/favicon.svg">
 
     <meta
         name="description"
@@ -23,48 +24,146 @@
 
 </head>
 
-<body data-page="project">
+<body
+    data-page="project"
+    data-theme="light">
 
-<header class="site-header">
-    <nav class="nav container" aria-label="Primary navigation">
+  <header class="site-header">
 
-        <a href="index.html" class="brand nav-item">
-            SONIA PEROVA
-        </a>
+        <!-- НИЖНИЙ СЛОЙ: SONYA + LANGUAGES -->
+        <nav class="nav container" aria-label="Primary navigation">
 
-        <div class="nav-links">
-            <a href="work.html" class="nav-item active">
-                WORK
+          <a href="index.html"
+            class="brand nav-item"
+            data-i18n="brand">
+            SONYA PEROVA
+          </a>
+
+          <!-- DESKTOP NAVIGATION -->
+          <div class="nav-links">
+
+            <a href="work.html"
+              class="nav-item active"
+              data-section="work"
+              data-i18n="navWork">
+              Work
             </a>
 
-            <a href="showreel.html" class="nav-item">
-                SHOWREEL
+            <a href="showreel.html"
+              class="nav-item"
+              data-section="showreel"
+              data-i18n="navShowreel">
+              Showreel
             </a>
 
-            <a href="index.html#contact" class="nav-item">
-                CONTACT
+            <a href="contact.html"
+              class="nav-item"
+              data-section="contact"
+              data-i18n="navContact">
+              Contact
             </a>
+
+          </div>
+
+          <div class="lang-switcher" aria-label="Language switcher">
+
+            <a href="#"
+              class="nav-item lang-btn active"
+              data-lang="eng"
+              aria-current="true">
+              ENG
+            </a>
+
+            <span class="lang-slash">/</span>
+
+            <a href="#"
+              class="nav-item lang-btn"
+              data-lang="ru"
+              aria-current="false">
+              RU
+            </a>
+
+          </div>
+
+              </nav>
+
+        </header>
+
+
+        <!-- ВЕРХНИЙ СЛОЙ: ТОЛЬКО BURGER / CROSS -->
+        <div class="burger-layer container">
+
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+          </button>
+
         </div>
 
-        <div class="lang-switcher">
-            <a href="#" class="nav-item lang-btn active">ENG</a>
-            <a href="#" class="nav-item lang-btn">RU</a>
+
+        <!-- MOBILE MENU — NORMAL -->
+        <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+
+      <div class="mobile-menu-links">
+
+          <a
+            href="index.html"
+            data-i18n="menuHome"
+          >
+            Home
+          </a>
+
+          <a
+            href="work.html"
+             class="active"
+            data-i18n="navWork"
+          >
+            Work
+          </a>
+
+          <a
+            href="showreel.html"
+            data-i18n="navShowreel"
+          >
+            Showreel
+          </a>
+
+          <a
+            href="contact.html"
+            data-i18n="navContact"
+          >
+            Contact
+          </a>
+
         </div>
 
-    </nav>
-</header>
+      </div>
+
+
 
 
 <main class="project-page">
 
     <div class="project-navigation container">
 
-        <a href="project-prev.html" class="project-arrow project-arrow-left">
-            <img src="images/arrow.svg" alt="Previous project">
+        <a href="#" class="project-arrow project-arrow-left">
+            <picture>
+                <source media="(max-width: 760px)" srcset="images/arrow3.svg">
+                <img src="images/arrow.svg" alt="Previous project">
+            </picture>
         </a>
 
-        <a href="project-next.html" class="project-arrow project-arrow-right">
-            <img src="images/arrow.svg" alt="Next project">
+        <a href="#" class="project-arrow project-arrow-right">
+            <picture>
+                <source media="(max-width: 760px)" srcset="images/arrow3.svg">
+                <img src="images/arrow.svg" alt="Next project">
+            </picture>
         </a>
 
     </div>
@@ -72,196 +171,176 @@
     <section class="project-hero container">
 
         <div class="project-cover">
-            <img src="images/exhibition.jpg" alt="">
+            <img src="images/PotaninCover.jpg" alt="">
         </div>
 
         <div class="project-info">
-            <h1 class="project-title">
-                Что такое «не-место» по Марку Оже
-            </h1>
+          <h1 class="project-page-title" data-i18n="potaninTitle">
+              Фонд Потанина: Переплетая возможности
+          </h1>
 
-            <div class="project-tags"></div>
-
-        </div>
-
-    </section>
-
-    <section class="project-description-section container">
-        <div class="project-description-wrapper">
-            <p class="body-text project-description">
-                Видео-эксплейнер, посвященный социологическому и философскому понятию
-                «не-место».
-            </p>
-        </div>
-    </section>
-
-    <div class="container">
-        <div class="project-full-image">
-            <img src="images/nonplacevid.gif" alt="">
-        </div>
-    </div>
-
-    <section class="project-description-section container">
-        <div class="project-description-wrapper">
-            <p class="body-text project-description">
-                «Не-место» — понятие, введённое Марком Оже для описания пространств транзита, временного пребывания и взаимодействия, в которых личная идентичность отходит на второй план.
-            </p>
-        </div>
-    </section>
-
-    <section class="project-video-section container">
-
-        <div class="project-video">
-            <div class="kinescope-wrapper">
-                <iframe
-                    src="https://kinescope.io/embed/chdWkfmVHjCjXFp7d5V6LD"
-                    allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
-                    frameborder="0"
-                    allowfullscreen>
-                </iframe>
+            <div class="project-tags">
+                <a
+                    href="work.html?tag=Motion"
+                    class="project-tag-link"
+                    data-tag="Motion"
+                    data-i18n="filterMotion"
+                >
+                    Motion
+                </a>
+                <a
+                    href="work.html?tag=Illustration"
+                    class="project-tag-link"
+                    data-tag="Illustration"
+                    data-i18n="filterIllustration"
+                >
+                    Illustration
+                </a>
+                <a
+                    href="work.html?tag=Graphic design"
+                    class="project-tag-link"
+                    data-tag="Graphic design"
+                    data-i18n="filterGraphic"
+                >
+                    Graphic Design
+                </a>
             </div>
+
         </div>
 
     </section>
+<section class="project-description-section container reveal">
+    <div class="project-description-wrapper">
+        <p class="body-text project-description" data-i18n="potaninIntro">
+            Иллюстративное переосмысление айдентики фонда. За основу взята динамичная лента, которая мягко организует пространство, позволяя разным историям фонда находить свое место. Она не доминирует, а создает среду, где профессиональная поддержка обретает человеческое измерение. Обновленный стиль отражает главное: за системой грантов стоят реальные люди и их идеи. В работу вошли плакаты, вывески и сувенирная продукция.
+        </p>
+    </div>
+</section>
 
-    <section class="project-description-section container">
-        <div class="project-description-wrapper">
-            <p class="body-text project-description">
-                Основой проекта становится белое пространство — метафора не-места,
-                противопоставленного антропологическому месту. Светлая, стерильная
-                и легко масштабируемая среда определяет весь визуальный стиль
-                и становится главным носителем идеи.
-            </p>
-        </div>
-    </section>
+<div class="container">
+    <div class="project-full-image reveal">
+         <img src="images/potanin1.gif" alt="">
+    </div>
+</div>
 
-    <section class="project-collage-section container">
+<div class="container">
+    <div class="project-full-image reveal">
+         <img src="images/potanin3.png" alt="">
+    </div>
+</div>
+
+<div class="container">
+    <div class="project-full-image reveal">
+         <img src="images/potanin4.png" alt="">
+    </div>
+</div>
+
+<div class="container">
+    <div class="project-full-image reveal">
+         <img src="images/potanin5.png" alt="">
+    </div>
+</div>
+
+<div class="container">
+    <div class="project-full-image reveal">
+         <img src="images/potanin6.png" alt="">
+    </div>
+</div>
+
+    <section class="project-collage-section project-potanin-collage container reveal">
 
         <div class="project-collage-left">
-            <img src="images/nonplace2.png" alt="">
+            <img src="images/potanin7.png" alt="">
         </div>
 
         <div class="project-collage-right">
-            <img src="images/nonplace3.png" alt="">
+            <img src="images/potanin8.png" alt="">
         </div>
 
     </section>
 
-    <div class="container">
-        <div class="project-full-image">
-            <img src="images/nonplace4.gif" alt="">
+<div class="container">
+    <div class="project-full-image reveal">
+         <img src="images/potanin9.gif" alt="">
+    </div>
+</div>
+
+<div class="container">
+    <div class="project-full-image reveal">
+         <img src="images/potanin10.png" alt="">
+    </div>
+</div>
+
+<section class="project-video-section container">
+    <div class="project-video">
+        <div class="kinescope-wrapper">
+            <iframe
+                src="https://kinescope.io/jfsMukKWRqmNitMuCQY5JW"
+                allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
         </div>
     </div>
+</section>
 
-    <div class="container">
-        <div class="project-full-image">
-            <img src="images/nonplace5.gif" alt="">
-        </div>
-    </div>
-
-    <section class="project-collage-section container">
-
+<section class="project-collage-section project-potanin-collage container reveal">
         <div class="project-collage-left">
-            <img src="images/nonplace6.png" alt="">
+            <img src="images/potanin1.png" alt="">
         </div>
-
         <div class="project-collage-right">
-            <img src="images/nonplace7.png" alt="">
+            <img src="images/potanin2.png" alt="">
         </div>
+</section>
 
-    </section>
+<div class="container">
+    <div class="project-full-image reveal">
+         <img src="images/potanin11.png" alt="">
+    </div>
+</div>
 
-    <section class="project-description-section container">
-        <div class="project-description-wrapper">
-            <p class="body-text project-description">
-                Антропологическое место и не-место в концепции проекта существуют 
-                как противоположности. Это противопоставление поддерживается
-                сменой композиции: при рассказе о месте внимание сосредоточено на человеке, 
-                а при переходе к не-месту — на самом пространстве.
-            </p>
-        </div>
-    </section>
-
-    <div class="container">
-        <div class="project-full-image">
-            <img src="images/nonplace11.gif" alt="">
+<section class="project-video-section container">
+    <div class="project-video">
+        <div class="kinescope-wrapper">
+            <iframe
+                src="https://kinescope.io/4xQSVAtJfRxUmjNVTZyPuK"
+                allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
         </div>
     </div>
+</section>
 
-    <section class="project-description-section container">
-        <div class="project-description-wrapper">
-            <p class="body-text project-description">
-                Сетки и рамки ограничивают белое пространство, буквально формируя
-                внутри него новые не-места. Единая стилистика фотографий,
-                видео и графики показывает, как любые объекты, попадающие в подобные пространства, 
-                подчиняются их логике и становятся частью единой системы.
-            </p>
-        </div>
-    </section>
-
-    <section class="project-collage-section container">
-
-        <div class="project-collage-left">
-            <img src="images/nonplace9.gif" alt="">
-        </div>
-
-        <div class="project-collage-right">
-            <img src="images/nonplace10.gif" alt="">
-        </div>
-
-    </section>
-
-    <div class="container">
-        <div class="project-full-image">
-            <img src="images/nonplace12.gif" alt="">
-        </div>
+<div class="container">
+    <div class="project-full-image reveal">
+         <img src="images/potanin.gif" alt="">
     </div>
+</div>
 
-    <section class="project-collage-section container">
-
-        <div class="project-collage-left">
-            <img src="images/nonplace13.png" alt="">
-        </div>
-
-        <div class="project-collage-right">
-            <img src="images/nonplace14.png" alt="">
-        </div>
-
-    </section>
-
-    <div class="container">
-        <div class="project-full-image">
-            <img src="images/nonplace16.gif" alt="">
-        </div>
+<div class="container">
+    <div class="project-full-image reveal">
+         <img src="images/potanin12.gif" alt="">
     </div>
+</div>
 
-    <section class="project-collage-section container">
+<div class="project-navigation container project-navigation-bottom">
 
-        <div class="project-collage-left">
-            <img src="images/nonplace17.gif" alt="">
-        </div>
+        <a href="#" class="project-arrow project-arrow-left">
+            <picture>
+                <source media="(max-width: 760px)" srcset="images/arrow3.svg">
+                <img src="images/arrow.svg" alt="Previous project">
+            </picture>
+        </a>
 
-        <div class="project-collage-right">
-            <img src="images/nonplace18.gif" alt="">
-        </div>
+        <a href="#" class="project-arrow project-arrow-right">
+            <picture>
+                <source media="(max-width: 760px)" srcset="images/arrow3.svg">
+                <img src="images/arrow.svg" alt="Next project">
+            </picture>
+        </a>
 
-    </section>
-
-    <section class="project-description-section container">
-        <div class="project-description-wrapper">
-            <p class="body-text project-description">
-                Моя роль: Разработка визуальной концепции, создание статичной графики,
-                motion design и арт-дирекшн проекта. Также я курировала работу
-                диктора и саунд-дизайнера, формируя единый визуальный и звуковой язык видео.
-            </p>
-        </div>
-    </section>
-
-    <div class="container">
-        <div class="project-full-image">
-            <img src="images/nonplace19.gif" alt="">
-        </div>
-    </div>
+    </div> 
 
 </main>
 
@@ -362,8 +441,12 @@
         <div class="footer-block">
             <h3 data-i18n="footerContacts">Contacts</h3>
             <div class="footer-entry">
-              <p>sofiaperovalala@gmail.com</p>
-              <p>+7 926 925 01 08</p>
+              <a href="mailto:sofiaperovalala@gmail.com">
+                sofiaperovalala@gmail.com
+              </a>
+              <a href="tel:+79269250108">
+                +7 926 925 01 08
+              </a>
             </div>
           </div>
         </div>

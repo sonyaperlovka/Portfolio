@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Non-place — Sonia Perova</title>
+    <title>Non-place — case study</title>
+    <link rel="icon" type="image/png" href="images/favicon.svg">
 
     <meta
         name="description"
@@ -25,76 +26,140 @@
 
 <body data-page="project">
 
-<header class="site-header">
-    <nav class="nav container" aria-label="Primary navigation">
+  <header class="site-header">
 
-        <a href="index.html" class="brand nav-item" data-i18n="brand">
-            SONIA PEROVA
-        </a>
+        <!-- НИЖНИЙ СЛОЙ: SONYA + LANGUAGES -->
+        <nav class="nav container" aria-label="Primary navigation">
 
-        <div class="nav-links">
-            <a
-                href="work.html"
-                class="nav-item"
-                data-section="work"
-                data-i18n="navWork"
-            >
-                WORK
+          <a href="index.html"
+            class="brand nav-item"
+            data-i18n="brand">
+            SONYA PEROVA
+          </a>
+
+          <!-- DESKTOP NAVIGATION -->
+          <div class="nav-links">
+
+            <a href="work.html"
+              class="nav-item active"
+              data-section="work"
+              data-i18n="navWork">
+              Work
             </a>
 
-            <a
-                href="showreel.html"
-                class="nav-item"
-                data-section="showreel"
-                data-i18n="navShowreel"
-            >
-                SHOWREEL
+            <a href="showreel.html"
+              class="nav-item"
+              data-section="showreel"
+              data-i18n="navShowreel">
+              Showreel
             </a>
 
-            <a
-                href="index.html#contact"
-                class="nav-item"
-                data-section="contact"
-                data-i18n="navContact"
-            >
-                CONTACT
+            <a href="contact.html"
+              class="nav-item"
+              data-section="contact"
+              data-i18n="navContact">
+              Contact
             </a>
+
+          </div>
+
+          <div class="lang-switcher" aria-label="Language switcher">
+
+            <a href="#"
+              class="nav-item lang-btn active"
+              data-lang="eng"
+              aria-current="true">
+              ENG
+            </a>
+
+            <span class="lang-slash">/</span>
+
+            <a href="#"
+              class="nav-item lang-btn"
+              data-lang="ru"
+              aria-current="false">
+              RU
+            </a>
+
+          </div>
+
+              </nav>
+
+        </header>
+
+
+        <!-- ВЕРХНИЙ СЛОЙ: ТОЛЬКО BURGER / CROSS -->
+        <div class="burger-layer container">
+
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+          </button>
+
         </div>
 
-        <div class="lang-switcher" aria-label="Language switcher">
-            <a
-                href="#"
-                class="nav-item lang-btn"
-                data-lang="eng"
-                aria-current="false"
-            >
-                ENG
-            </a>
 
-            <a
-                href="#"
-                class="nav-item lang-btn"
-                data-lang="ru"
-                aria-current="false"
-            >
-                RU
-            </a>
+        <!-- MOBILE MENU — NORMAL -->
+        <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+
+      <div class="mobile-menu-links">
+
+          <a
+            href="index.html"
+            data-i18n="menuHome"
+          >
+            Home
+          </a>
+
+          <a
+            href="work.html"
+             class="active"
+            data-i18n="navWork"
+          >
+            Work
+          </a>
+
+          <a
+            href="showreel.html"
+            data-i18n="navShowreel"
+          >
+            Showreel
+          </a>
+
+          <a
+            href="contact.html"
+            data-i18n="navContact"
+          >
+            Contact
+          </a>
+
         </div>
 
-    </nav>
-</header>
+      </div>
 
 
-<main class="project-page">
+<main class="project-page project-nonplace">
 
     <div class="project-navigation container">
 
-        <a href="project-prev.html" class="project-arrow project-arrow-left">
-            <img src="images/arrow.svg" alt="Previous project">
+        <a href="#" class="project-arrow project-arrow-left">
+            <picture>
+                <source media="(max-width: 760px)" srcset="images/arrow3.svg">
+                <img src="images/arrow.svg" alt="Previous project">
+            </picture>
         </a>
 
-        <a href="project-next.html" class="project-arrow project-arrow-right">
-            <img src="images/arrow.svg" alt="Next project">
+        <a href="#" class="project-arrow project-arrow-right">
+            <picture>
+                <source media="(max-width: 760px)" srcset="images/arrow3.svg">
+                <img src="images/arrow.svg" alt="Next project">
+            </picture>
         </a>
 
     </div>
@@ -102,7 +167,7 @@
     <section class="project-hero container">
 
         <div class="project-cover">
-            <img src="images/exhibition.jpg" alt="">
+            <img src="images/cover_nemesto.jpg" alt="">
         </div>
 
         <div class="project-info">
@@ -125,7 +190,7 @@
 
     </section>
 
-    <section class="project-description-section container">
+    <section class="project-description-section container reveal">
         <div class="project-description-wrapper">
             <p class="body-text project-description" data-i18n="nonplaceIntro">
                 Video explainer about the sociological and philosophical concept of the “non-place”.
@@ -134,12 +199,12 @@
     </section>
 
     <div class="container">
-        <div class="project-full-image">
+        <div class="project-full-image reveal">
             <img src="images/nonplacevid.gif" alt="">
         </div>
     </div>
 
-    <section class="project-description-section container">
+    <section class="project-description-section container reveal">
         <div class="project-description-wrapper">
             <p class="body-text project-description" data-i18n="nonplaceDefinition">
                 “Non-place” is a concept introduced by Marc Augé to describe spaces of transit, temporary presence and interaction in which personal identity recedes into the background.
@@ -162,7 +227,7 @@
 
     </section>
 
-    <section class="project-description-section container">
+    <section class="project-description-section container reveal">
         <div class="project-description-wrapper">
             <p class="body-text project-description" data-i18n="nonplaceVisual">
                 The project is built around white space — a metaphor 
@@ -174,7 +239,7 @@
         </div>
     </section>
 
-    <section class="project-collage-section container">
+    <section class="project-collage-section container reveal">
 
         <div class="project-collage-left">
             <img src="images/nonplace2.png" alt="">
@@ -187,30 +252,30 @@
     </section>
 
     <div class="container">
-        <div class="project-full-image">
+        <div class="project-full-image reveal">
             <img src="images/nonplace4.gif" alt="">
         </div>
     </div>
 
     <div class="container">
-        <div class="project-full-image">
+        <div class="project-full-image reveal">
             <img src="images/nonplace5.gif" alt="">
         </div>
     </div>
 
     <section class="project-collage-section container">
 
-        <div class="project-collage-left">
+        <div class="project-collage-left reveal">
             <img src="images/nonplace6.png" alt="">
         </div>
 
-        <div class="project-collage-right">
+        <div class="project-collage-right reveal">
             <img src="images/nonplace7.png" alt="">
         </div>
 
     </section>
 
-    <section class="project-description-section container">
+    <section class="project-description-section container reveal">
         <div class="project-description-wrapper">
             <p class="body-text project-description" data-i18n="nonplaceContrast">
                 Anthropological place and non-place exist as opposites within 
@@ -223,12 +288,12 @@
     </section>
 
     <div class="container">
-        <div class="project-full-image">
+        <div class="project-full-image reveal">
             <img src="images/nonplace11.gif" alt="">
         </div>
     </div>
 
-    <section class="project-description-section container">
+    <section class="project-description-section container reveal">
         <div class="project-description-wrapper">
             <p class="body-text project-description" data-i18n="nonplaceGrid">
                 Grids and frames constrain the white space, 
@@ -243,53 +308,53 @@
 
     <section class="project-collage-section container">
 
-        <div class="project-collage-left">
+        <div class="project-collage-left reveal">
             <img src="images/nonplace9.gif" alt="">
         </div>
 
-        <div class="project-collage-right">
+        <div class="project-collage-right reveal">
             <img src="images/nonplace10.gif" alt="">
         </div>
 
     </section>
 
     <div class="container">
-        <div class="project-full-image">
+        <div class="project-full-image reveal">
             <img src="images/nonplace12.gif" alt="">
         </div>
     </div>
 
     <section class="project-collage-section container">
 
-        <div class="project-collage-left">
+        <div class="project-collage-left reveal">
             <img src="images/nonplace13.png" alt="">
         </div>
 
-        <div class="project-collage-right">
+        <div class="project-collage-right reveal">
             <img src="images/nonplace14.png" alt="">
         </div>
 
     </section>
 
     <div class="container">
-        <div class="project-full-image">
+        <div class="project-full-image reveal">
             <img src="images/nonplace16.gif" alt="">
         </div>
     </div>
 
     <section class="project-collage-section container">
 
-        <div class="project-collage-left">
+        <div class="project-collage-left reveal">
             <img src="images/nonplace17.gif" alt="">
         </div>
 
-        <div class="project-collage-right">
+        <div class="project-collage-right reveal">
             <img src="images/nonplace18.gif" alt="">
         </div>
 
     </section>
 
-    <section class="project-description-section container">
+    <section class="project-description-section container reveal">
         <div class="project-description-wrapper">
             <p class="body-text project-description" data-i18n="nonplaceRole">
                 My role: Visual concept development, static graphics, 
@@ -301,10 +366,28 @@
     </section>
 
     <div class="container">
-        <div class="project-full-image">
+        <div class="project-full-image reveal">
             <img src="images/nonplace19.gif" alt="">
         </div>
     </div>
+
+    <div class="project-navigation container project-navigation-bottom">
+
+        <a href="#" class="project-arrow project-arrow-left">
+            <picture>
+                <source media="(max-width: 760px)" srcset="images/arrow3.svg">
+                <img src="images/arrow.svg" alt="Previous project">
+            </picture>
+        </a>
+
+        <a href="#" class="project-arrow project-arrow-right">
+            <picture>
+                <source media="(max-width: 760px)" srcset="images/arrow3.svg">
+                <img src="images/arrow.svg" alt="Next project">
+            </picture>
+        </a>
+
+    </div>  
 
 </main>
 
@@ -405,8 +488,12 @@
         <div class="footer-block">
             <h3 data-i18n="footerContacts">Contacts</h3>
             <div class="footer-entry">
-              <p>sofiaperovalala@gmail.com</p>
-              <p>+7 926 925 01 08</p>
+              <a href="mailto:sofiaperovalala@gmail.com">
+                sofiaperovalala@gmail.com
+              </a>
+              <a href="tel:+79269250108">
+                +7 926 925 01 08
+              </a>
             </div>
           </div>
         </div>
